@@ -14,45 +14,60 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
+    padding: 50px;
 }
 
 .gallery-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
 }
 
 .gallery-item {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 800px;
+    background-color: #e0e0e0;
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 300px; /* Add or increase this value to make the item taller */
+}
+
+
+.image-container {
+    flex: 2;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 500px; 
-    background-color: #e0e0e0; 
-    border-radius: 5%; 
+    overflow: hidden;
 }
 
-.gallery img {
-    width: 500px;
-    height: 500px; 
-    object-fit: cover;
-    border-radius: 5%
-}
-
-.gallery img:hover {
-    transform: scale(1.1);
-}
-
-.gallery-container {
-    display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    justify-items: center;
-    justify-content: center;
+.image-container img {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    height: 100%;
+    object-fit: cover;
+}
 
+.description-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.description-container h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.description-container p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
 }
